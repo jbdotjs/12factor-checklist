@@ -13,7 +13,8 @@ export const twelveFactor: Factor[] = [
     examples: [
       'Single Git repository for the app',
       'Multiple environments (dev, staging, prod) from same codebase',
-      'No code duplication across environments'
+      'No code duplication across environments',
+      'Example: deploy the same main branch commit SHA to staging and production'
     ]
   },
   {
@@ -23,7 +24,8 @@ export const twelveFactor: Factor[] = [
     examples: [
       'package.json, requirements.txt, or Gemfile present',
       'No reliance on system-wide packages',
-      'Dependency isolation (virtual environments, containers)'
+      'Dependency isolation (virtual environments, containers)',
+      'Example: pin versions in package-lock.json and install with npm ci'
     ]
   },
   {
@@ -33,7 +35,8 @@ export const twelveFactor: Factor[] = [
     examples: [
       'Environment variables for configuration',
       'No hardcoded credentials or API keys',
-      'Config varies between environments'
+      'Config varies between environments',
+      'Example: use DATABASE_URL and API_KEY from env vars in every environment'
     ]
   },
   {
@@ -43,7 +46,8 @@ export const twelveFactor: Factor[] = [
     examples: [
       'Database, cache, message queue treated as resources',
       'Can swap services via config without code changes',
-      'Services accessed via URLs or credentials in environment'
+      'Services accessed via URLs or credentials in environment',
+      'Example: switch from local Redis to hosted Redis by changing REDIS_URL'
     ]
   },
   {
@@ -53,7 +57,8 @@ export const twelveFactor: Factor[] = [
     examples: [
       'CI/CD pipeline with distinct stages',
       'Immutable releases with unique IDs',
-      'Cannot modify code at runtime'
+      'Cannot modify code at runtime',
+      'Example: build once in CI, tag release artifact, then run artifact unchanged'
     ]
   },
   {
@@ -63,7 +68,8 @@ export const twelveFactor: Factor[] = [
     examples: [
       'No local state stored between requests',
       'Sessions stored in external datastore (Redis, DB)',
-      'Processes are disposable and can be killed/started anytime'
+      'Processes are disposable and can be killed/started anytime',
+      'Example: keep cart/session state in PostgreSQL or Redis, never in memory only'
     ]
   },
   {
@@ -73,7 +79,8 @@ export const twelveFactor: Factor[] = [
     examples: [
       'Self-contained web server (not relying on Apache/Nginx injection)',
       'App binds to a port and listens for requests',
-      'Port specified via environment variable'
+      'Port specified via environment variable',
+      'Example: Node server listens on process.env.PORT for Heroku/Render/Fly'
     ]
   },
   {
@@ -83,7 +90,8 @@ export const twelveFactor: Factor[] = [
     examples: [
       'Horizontal scaling by adding more processes',
       'Different process types for different workloads (web, worker)',
-      'Process manager handles process distribution'
+      'Process manager handles process distribution',
+      'Example: run 4 web replicas and 2 worker replicas behind the same release'
     ]
   },
   {
@@ -93,7 +101,8 @@ export const twelveFactor: Factor[] = [
     examples: [
       'Quick startup time (seconds, not minutes)',
       'Graceful shutdown on SIGTERM',
-      'Can handle sudden process death'
+      'Can handle sudden process death',
+      'Example: close open HTTP connections and stop consuming queue jobs on SIGTERM'
     ]
   },
   {
@@ -103,7 +112,8 @@ export const twelveFactor: Factor[] = [
     examples: [
       'Same backing services in all environments',
       'Same dependencies and versions everywhere',
-      'Minimal time gap between dev and production deploys'
+      'Minimal time gap between dev and production deploys',
+      'Example: run Docker Compose in dev with the same Postgres/Redis versions as prod'
     ]
   },
   {
@@ -113,7 +123,8 @@ export const twelveFactor: Factor[] = [
     examples: [
       'App writes logs to stdout/stderr',
       'No log file management in the app',
-      'Log aggregation handled by execution environment'
+      'Log aggregation handled by execution environment',
+      'Example: stream stdout to CloudWatch, Datadog, or ELK via platform collectors'
     ]
   },
   {
@@ -123,7 +134,8 @@ export const twelveFactor: Factor[] = [
     examples: [
       'Database migrations run as separate processes',
       'Admin scripts use same codebase and config',
-      'One-off tasks run in identical environment as regular processes'
+      'One-off tasks run in identical environment as regular processes',
+      'Example: run `npm run migrate` in a one-off release command container'
     ]
   }
 ];
