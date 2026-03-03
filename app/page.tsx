@@ -22,7 +22,7 @@ export default function Home() {
   const percentage = totalItems > 0 ? Math.round((score / totalItems) * 100) : 0;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="min-h-screen bg-gradient-to-br from-emerald-50 to-teal-100 dark:from-gray-900 dark:to-gray-800">
       <main className="container mx-auto px-4 py-12 max-w-4xl">
         <div className="text-center mb-12">
           <h1 className="text-5xl font-bold text-gray-900 dark:text-white mb-4">
@@ -48,7 +48,7 @@ export default function Home() {
                   value={appName}
                   onChange={(e) => setAppName(e.target.value)}
                   placeholder="My Awesome App"
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 />
               </div>
               <div>
@@ -60,7 +60,7 @@ export default function Home() {
                   value={stack}
                   onChange={(e) => setStack(e.target.value)}
                   placeholder="Node.js, React, PostgreSQL"
-                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
+                  className="w-full px-4 py-2 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-emerald-500 focus:border-transparent dark:bg-gray-700 dark:text-white"
                 />
               </div>
             </div>
@@ -72,7 +72,7 @@ export default function Home() {
                 Checklist
               </h2>
               <div className="text-right">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+                <div className="text-3xl font-bold text-emerald-600 dark:text-emerald-400">
                   {score}/{totalItems}
                 </div>
                 <div className="text-sm text-gray-600 dark:text-gray-400">
@@ -109,7 +109,7 @@ export default function Home() {
               href="https://12factor.net"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-blue-600 dark:text-blue-400 hover:underline"
+              className="text-emerald-600 dark:text-emerald-400 hover:text-amber-600 dark:hover:text-amber-400 hover:underline"
             >
               The Twelve-Factor App
             </a>

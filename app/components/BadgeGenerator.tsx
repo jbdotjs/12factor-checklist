@@ -10,8 +10,8 @@ interface BadgeGeneratorProps {
 
 export function BadgeGenerator({ appName, stack, score, total, percentage }: BadgeGeneratorProps) {
   const getGradeColor = (percentage: number): string => {
-    if (percentage >= 90) return '#10b981'; // green
-    if (percentage >= 75) return '#3b82f6'; // blue
+    if (percentage >= 90) return '#10b981'; // emerald
+    if (percentage >= 75) return '#14b8a6'; // teal
     if (percentage >= 60) return '#f59e0b'; // amber
     if (percentage >= 40) return '#f97316'; // orange
     return '#ef4444'; // red
@@ -36,8 +36,8 @@ export function BadgeGenerator({ appName, stack, score, total, percentage }: Bad
     return `<svg width="500" height="300" xmlns="http://www.w3.org/2000/svg">
   <defs>
     <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" style="stop-color:#667eea;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#764ba2;stop-opacity:1" />
+      <stop offset="0%" style="stop-color:#10b981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f766e;stop-opacity:1" />
     </linearGradient>
     <filter id="shadow">
       <feDropShadow dx="0" dy="2" stdDeviation="3" flood-opacity="0.3"/>
@@ -125,7 +125,7 @@ export function BadgeGenerator({ appName, stack, score, total, percentage }: Bad
       <div className="flex flex-col sm:flex-row gap-3">
         <button
           onClick={downloadBadge}
-          className="flex-1 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+          className="flex-1 px-6 py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
@@ -134,7 +134,7 @@ export function BadgeGenerator({ appName, stack, score, total, percentage }: Bad
         </button>
         <button
           onClick={copyBadgeMarkdown}
-          className="flex-1 px-6 py-3 bg-gray-600 hover:bg-gray-700 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
+          className="flex-1 px-6 py-3 bg-amber-500 hover:bg-amber-600 text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2"
         >
           <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
